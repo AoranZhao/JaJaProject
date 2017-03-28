@@ -1,0 +1,21 @@
+.scrolltabs {
+	width: 100%;
+	height: 100%;
+}
+
+.scrolltabs_panes {
+	background-color: #ADADAD;
+	height: 90%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.scrolltabs_tabs {
+	background-color: #898989;
+	height: 10%;
+	width: 100%;
+}
+
+.scrolltabs_tab {
+	height: 100%;
+}

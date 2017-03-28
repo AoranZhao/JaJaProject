@@ -1,0 +1,7 @@
+.pane {
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	background-color: white;
+	height: 100%;
+}
