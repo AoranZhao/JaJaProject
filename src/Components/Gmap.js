@@ -26,10 +26,41 @@ export default class Gmap extends Component {
 		}
 	}
 
+	handleMouseMove(e) {
+		e.stopPropagation();
+	}
+
+	handleMouseDown(e) {
+		e.stopPropagation();
+	}
+
+	handleMouseUp(e) {
+		e.stopPropagation();
+	}
+
+	handleMouseLeave(e) {
+		e.stopPropagation();
+	}
+
+	handleMouseOut(e) {
+		e.stopPropagation();
+	}
+
+	handleDragStart(e) {
+		e.stopPropagation();
+	}
+
 	render() {
 			return (
 					<div className="map"
-						draggable="false">
+						draggable="false"
+						onMouseMove={this.handleMouseMove.bind(this)} 
+						onDragStart={this.handleDragStart.bind(this)}
+						onMouseDown={this.handleMouseDown.bind(this)}
+						onMouseUp={this.handleMouseUp.bind(this)}
+						onMouseLeave={this.handleMouseLeave.bind(this)}
+						draggable="false"
+						onMouseOut={this.handleMouseOut.bind(this)}>
 						<SimpleMapExampleGoogleMap
 					        containerElement={
 					          <div style={{ height: `100%` }} />

@@ -191,7 +191,7 @@ export default class ScrollView extends Component {
 				onMouseDown={this.handleMouseDown.bind(this)}
 				onMouseUp={this.handleMouseUp.bind(this)}
 				onMouseLeave={this.handleMouseLeave.bind(this)}
-				draggable="true"
+				draggable="false"
 				onMouseOut={this.handleMouseOut.bind(this)}
 				// onTouchMove={this.handleTouchMove.bind(this)}
 				// onTouchStart={this.handleTouchStart.bind(this)}
