@@ -138,6 +138,12 @@ export default class ScrollView extends Component {
 		})
 	}
 
+	/*
+	() => {
+			this.traggerPage();
+		}
+	*/
+
 	handleTouchEnd(e) {
 		var current_move_dst = this.state.move_dst;
 		this.setState({
@@ -145,18 +151,20 @@ export default class ScrollView extends Component {
 			t_e_y: e.touches[0].clientY,
 			move_dst: 0,
 			recent_move_dst: current_move_dst
-		}, () => {
-			this.traggerPage();
 		})
 	}
+
+	/*
+	() => {
+			this.traggerPage();
+		}
+	*/
 
 	handleTouchCancel(e) {
 		var current_move_dst = this.state.move_dst;
 		this.setState({
 			t_c_x: e.touches[0].clientX,
 			t_c_y: e.touches[0].clientY
-		}, () => {
-			this.traggerPage();
 		})
 	}
 
