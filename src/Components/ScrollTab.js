@@ -50,7 +50,7 @@ export default class ScrollTab extends Component {
 			<div className="scrolltabs_panes" ref="panes">
 				<ScrollView 
 					style={{width: `${this.contents_len * 100}%`, transform: `translateX(${100 / this.contents_len * -1 * this.state.selected + this.state.offset}%)`}} 
-					trigger_dst={200}
+					trigger_dst={300}
 					trigger_forward={this.nextPane.bind(this)}
 					trigger_back={this.prevPane.bind(this)}
 					trigger_offset={this.triggerOffset.bind(this)}>
