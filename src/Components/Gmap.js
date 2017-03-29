@@ -28,7 +28,8 @@ export default class Gmap extends Component {
 
 	render() {
 			return (
-					<div className="map">
+					<div className="map"
+						draggable="false">
 						<SimpleMapExampleGoogleMap
 					        containerElement={
 					          <div style={{ height: `100%` }} />

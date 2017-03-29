@@ -103,6 +103,19 @@ export default class ScrollView extends Component {
 		})
 	}
 
+	handleMouseOut(e) {
+		var current_move_dst = this.state.move_dst;
+		this.setState({
+			clicked: false,
+			m_e_x: e.clientX,
+			m_e_y: e.clientY,
+			move_dst: 0,
+			recent_move_dst: current_move_dst
+		}, () => {
+			this.traggerPage();
+		})
+	}
+
 	handleTouchStart(e) {
 		this.setState({
 			t_s_x: e.touches[0].clientX,
@@ -179,10 +192,11 @@ export default class ScrollView extends Component {
 				onMouseUp={this.handleMouseUp.bind(this)}
 				onMouseLeave={this.handleMouseLeave.bind(this)}
 				draggable="true"
-				onTouchMove={this.handleTouchMove.bind(this)}
-				onTouchStart={this.handleTouchStart.bind(this)}
-				onTouchEnd={this.handleTouchEnd.bind(this)}
-				onTouchCancel={this.handleTouchCancel.bind(this)}
+				onMouseOut={this.handleMouseOut.bind(this)}
+				// onTouchMove={this.handleTouchMove.bind(this)}
+				// onTouchStart={this.handleTouchStart.bind(this)}
+				// onTouchEnd={this.handleTouchEnd.bind(this)}
+				// onTouchCancel={this.handleTouchCancel.bind(this)}
 				>
 				{this.props.children}
 			</div>
