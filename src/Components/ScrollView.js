@@ -112,14 +112,8 @@ export default class ScrollView extends Component {
 		})
 	}
 
-	handleTouchMove(e) {
-		var dst = e.touches[0].clientX - this.state.t_s_x;
-		this.props.trigger_offset(dst / 50);
-		this.setState({
-			t_x: e.touches[0].clientX,
-			t_y: e.touches[0].clientY,
-			move_dst: dst
-		}, () => {
+	/*
+		() => {
 			if(dst > this.props.trigger_dst) {
 				var temp_x = this.state.t_x;
 				var temp_y = this.state.t_y;
@@ -131,6 +125,16 @@ export default class ScrollView extends Component {
 					move_dst: 0
 				})
 			}
+		}
+	*/
+
+	handleTouchMove(e) {
+		var dst = e.touches[0].clientX - this.state.t_s_x;
+		this.props.trigger_offset(dst / 50);
+		this.setState({
+			t_x: e.touches[0].clientX,
+			t_y: e.touches[0].clientY,
+			move_dst: dst
 		})
 	}
 

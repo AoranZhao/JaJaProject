@@ -5,6 +5,8 @@ import Tab from './Tab';
 import Pane from './Pane';
 import ScrollView from './ScrollView';
 
+import Slider from 'react-motion-slider';
+
 export default class ScrollTab extends Component {
 	contents_len = 0;
 
@@ -19,6 +21,12 @@ export default class ScrollTab extends Component {
 			offset: 0
 		}
 	}
+
+	/*
+	return(
+			<Pane key={index} content={item} style={{width: `${100 / this.contents_len}%`}} />
+			);
+	*/
 
 	_panes(item, index) {
 		return(
