@@ -130,7 +130,7 @@ export default class ScrollView extends Component {
 
 	handleTouchMove(e) {
 		var dst = e.touches[0].clientX - this.state.t_s_x;
-		this.props.trigger_offset(dst / 50);
+		// this.props.trigger_offset(dst / 50);
 		this.setState({
 			t_x: e.touches[0].clientX,
 			t_y: e.touches[0].clientY,
