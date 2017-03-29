@@ -12,6 +12,9 @@ const intrs = [{
 }, {
 	title: 'Post页面',
 	desc: 'Post页面是用来获取名人的社交状态，属于娱乐一类。 点击左上角的按钮选择相应的名人'
+}, {
+	title: 'Map页面',
+	desc: 'Map页面用来展示地图， 属于工具一类。可以用来显示Marker，或路径'
 }];
 
 export default class Front extends Component {
